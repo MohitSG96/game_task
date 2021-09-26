@@ -30,4 +30,4 @@ To get the Node server running locally:
 
 ## Authentication
 
-Requests are authenticated using the `Authorization` header with a valid JWT. We define two express middlewares in `middlewares/deserializeUser.ts` and `requiresUser.ts` that can be used to authenticate requests. The `required` middleware configures the `express-jwt` middleware using our application's secret and will return a 401 status code if the request cannot be authenticated. The payload of the JWT can then be accessed from `req.payload` in the endpoint. The `optional` middleware configures the `express-jwt` in the same way as `required`, but will _not_ return a 401 status code if the request cannot be authenticated.
+Requests are authenticated using the `Authorization` header with a valid JWT. We define two express middlewares in `middlewares/deserializeUser.ts` and `requiresUser.ts` that can be used to authenticate requests. The `required` middleware configures the `express-jwt` middleware using our application's secret and will return a 401 status code if the request cannot be authenticated. The payload of the JWT can then be accessed from `req.payload` in the endpoint.
