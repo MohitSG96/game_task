@@ -12,6 +12,8 @@ To get the Node server running locally:
 - Clone this repo
 - `yarn install` or `npm install` to install all required dependencies
 - `yarn start` or `npm run start` (if on linux run `bash ./run.sh`) to start the local server
+- download postman collection from [here](https://www.getpostman.com/collections/4292774270e30df42a4c)
+- For API (other than signUp and login) add `Authorization = Bearer` generated after logging in 
 
 ## Application Structure
 
