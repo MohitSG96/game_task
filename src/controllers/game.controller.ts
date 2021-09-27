@@ -68,4 +68,20 @@ export class GameConroller {
       return res.status(409).send(e instanceof Error ? e.message : e);
     }
   }
+
+  async deleteGame(req: Request, res: Response) {
+    const gameService = new GameService();
+    const errors = validationResult(req);
+    if (errors && errors.array().length > 0) {
+      return res.status(422).json(errors.array());
+    }
+    try {
+      const updateValues = req.body;
+      const gameId = parseInt(req.params.id);
+      const games = await gameService.deleteGameById(gameId);
+      return res.json({ rows: games });
+    } catch (e) {
+      return res.status(409).send(e instanceof Error ? e.message : e);
+    }
+  }
 }

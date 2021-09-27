@@ -17,4 +17,7 @@ gameRoute.post("/update/:id", requiresUser, gameController.updateGame);
 // get game by id
 gameRoute.get("/:id", requiresUser, gameController.getGame);
 
+// delete game by id
+gameRoute.delete("/:id", requiresUser, gameController.deleteGame);
+
 export default gameRoute;
